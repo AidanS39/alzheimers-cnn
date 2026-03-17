@@ -35,7 +35,7 @@ This project trains a custom CNN to classify MRI brain scans into four Alzheimer
 
 ## Dataset
 
-**[MRI Scans Alzheimer Detection](https://huggingface.co/datasets/yogitamakkar178/mri_scans_alzeimer_detection)** — ~10,800 grayscale MRI brain scan images, each labeled with one of four Alzheimer's severity levels.
+**[MRI Scans Alzheimer Detection](https://huggingface.co/datasets/yogitamakkar178/mri_scans_alzeimer_detection)** - ~10,800 grayscale MRI brain scan images, each labeled with one of four Alzheimer's severity levels.
 
 The original train/test splits from Hugging Face were found to be class-imbalanced, leading to overfitting. The splits are discarded and regenerated with an 80/20 stratified split to ensure balanced class representation across both sets.
 
@@ -46,7 +46,7 @@ The original train/test splits from Hugging Face were found to be class-imbalanc
 
 **Preprocessing:**
 
-Both splits are normalized with `mean=0.5, std=0.5`. No data augmentation is applied to the final model — it was tested but produced negligible or slightly negative results at this dataset scale.
+Both splits are normalized with `mean=0.5, std=0.5`. No data augmentation is applied to the final model - it was tested but produced negligible or slightly negative results at this dataset scale.
 
 ## Architecture
 
@@ -135,7 +135,7 @@ Run all cells in order to:
 
 ## Results
 
-The model achieves a best test accuracy of approximately **99%**, with train and test accuracies remaining closely aligned throughout training — test accuracy trailing train accuracy by roughly 2%.
+The model achieves a best test accuracy of approximately **99%**, with train and test accuracies remaining closely aligned throughout training - test accuracy trailing train accuracy by roughly 2%.
 
 Training and test accuracy are plotted across all 30 epochs using `seaborn`, giving a clear view of convergence and any signs of overfitting.
 
@@ -147,7 +147,7 @@ Regenerating the train/test splits was the single most impactful change in this 
 
 ### What didn't
 
-Data augmentation (color jitter) was tested but produced no meaningful improvement — and was slightly detrimental. This is likely due to the relatively small dataset size (~10.8k images); augmentation tends to be more impactful at larger scales.
+Data augmentation (color jitter) was tested but produced no meaningful improvement - and was slightly detrimental. This is likely due to the relatively small dataset size (~10.8k images); augmentation tends to be more impactful at larger scales.
 
 ### Potential improvements
 
