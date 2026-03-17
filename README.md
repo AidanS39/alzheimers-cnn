@@ -2,7 +2,7 @@
 
 ![alzheimersCNN](./public/logo.svg)
 
-_Predicting levels of Alzheimers using a CNN with MRI images_
+_Predicting levels of Alzheimers using a CNN with MRI images._
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?style=for-the-badge&logo=pytorch&logoColor=white)](#)
@@ -95,7 +95,7 @@ transformers
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/<your-username>/alzheimers-cnn.git
+git clone https://github.com/AidanS39/alzheimers-cnn.git
 cd alzheimers-cnn
 ```
 
@@ -118,20 +118,23 @@ pip install torch torchvision datasets transformers numpy pandas matplotlib seab
 huggingface-cli login
 ```
 
-## Usage
+### Usage
 
-Open and run `AlzheimersCNN.ipynb` in Jupyter:
+The model can be run either as a Jupyter notebook or as a plain Python script, depending on your preference.
 
+**Option 1 — Jupyter Notebook**
 ```bash
-jupyter notebook AlzheimersCNN.ipynb
+jupyter notebook alzheimersCNN.ipynb
 ```
 
-Run all cells in order to:
-1. Download and preprocess the dataset
-2. Define and initialize the model
-3. Train for 30 epochs, printing loss and accuracy per epoch
-4. Evaluate on the test set after each epoch
-5. Plot train vs. test accuracy across all epochs
+Run all cells in order to download and preprocess the dataset, train the model, evaluate it, and plot accuracy curves.
+
+**Option 2 — Python Script**
+```bash
+python3 alzheimersCNN.py
+```
+
+Equivalent to running all notebook cells in sequence. Accuracy curves are saved to `accuracy.png` in the working directory rather than displayed inline.
 
 ## Results
 
